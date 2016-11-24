@@ -28,18 +28,34 @@
 
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     android:background="@color/colorbackground"
-    tools:context="com.cruxitech.android.descool.Landingpage"
+    tools:context="com.cruxitech.android.invenapp.Landingpage"
 
     tools:showIn="@layout/activity_landingpage">
 
+    <TextView
+        android:id="@+id/txtHeaderAccountActivate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
 
+        android:layout_centerHorizontal="true"
+        android:textColor="#010500"
+        android:text="Please click on the below link to activate your account. You will be asked to enter the 6 digit unique code sent on your registered email."
+        android:typeface="serif"
+        android:textAppearance="?android:textAppearanceSmall"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:layout_centerInParent="true"
+
+        android:visibility="gone"
+
+        />
 
     <TextView
         android:id="@+id/txtviewAccountStatus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
-android:layout_centerHorizontal="true"
+        android:layout_below="@+id/txtHeaderAccountActivate"
+        android:layout_centerHorizontal="true"
         android:textColor="#19540b"
         android:text="Activate Account"
         android:typeface="serif"
@@ -121,6 +137,26 @@ android:layout_centerHorizontal="true"
         android:layout_gravity="center_horizontal"
         android:id="@+id/btnViewAllDevices"
         android:onClick="ViewAllDevices"
+        />
+
+
+
+
+    <TextView
+        android:id="@+id/NewHome"
+        android:layout_below="@+id/ManageUserRoles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Home"
+        android:typeface="serif"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:textStyle="bold"
+        android:textColor="#f1ed3c06"
+        android:onClick="newhome"
+        android:clickable="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:visibility="visible"
         />
 
 

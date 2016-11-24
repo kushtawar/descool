@@ -5,8 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:minHeight="?attr/actionBarSize"
+    android:titleTextAppearance="?attr/textAppearanceSmallPopupMenu"
+
+    android:elevation="4dp"
     android:background="@color/colorToolbar"
     theme="@style/MyToolbarStyle">
+
+
+
+
     <ImageView
         android:id="@+id/imagebuttonback"
         android:layout_width="wrap_content"
@@ -18,21 +25,23 @@
         android:src="@mipmap/backbutton_1"
         />
 
-    <SearchView
-        android:id="@+id/searchfield"
-        android:layout_width="fill_parent"
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="0dp"
-        android:visibility="gone"
-android:backgroundTint="@color/colorAccent"
-        android:hint="Search devices.." >
-    </SearchView>
+        android:textSize="20dp"
+        android:textColor="#996467"
+        android:textStyle="bold"
+        android:text=""
+        android:layout_gravity="left"
+        android:id="@+id/toolbar_title" />
+
+
 
     <ImageView
         android:id="@+id/deleteiconbase"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        android:layout_width="30dp"
+        android:layout_height="50dp"
+        android:layout_gravity="right"
         android:clickable="true"
         android:onClick="methodDeleteDevice"
         android:src="@mipmap/deleteicon_1"
@@ -49,6 +58,7 @@ android:backgroundTint="@color/colorAccent"
         android:layout_height="wrap_content"
         android:layout_gravity="right"
         android:clickable="true"
+        android:visibility="gone"
         android:onClick="showuserdetails"
         android:src="@mipmap/user_default"
         android:layout_marginRight="5dp"
@@ -58,7 +68,7 @@ android:backgroundTint="@color/colorAccent"
         android:layout_width="wrap_content"
         android:layout_height="20dp"
         android:layout_gravity="right"
-
+    android:visibility="gone"
         android:textColor="#FFFFFF"
         android:textStyle="italic"
         android:layout_centerHorizontal="true"

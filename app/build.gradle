@@ -16,7 +16,7 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             applicationVariants.all { variant ->
-                variant.outputs.each { output ->
+                variant.outputs.each { output ->j
                     project.ext { appName = 'descool' }
                     def newName = output.outputFile.name
                     newName = newName.replace("app-", "$project.ext.appName-")

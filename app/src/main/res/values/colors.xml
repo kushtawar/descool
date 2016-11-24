@@ -6,8 +6,8 @@
     <color name="colorPrimaryDark">#0e2ece</color>
     <color name="colorAccent">#d90e07</color>
     <color name="colorHint">#202128</color>
-    <color name="colorToolbar">#7d82ab</color>
+    <color name="colorToolbar">#1a2474</color>
     <color name="colorLoginToolbar">#675fd2</color>
-    <color name="colorPopup">#6cbab0</color>
+    <color name="colorPopup">#4783ce</color>
 
 </resources>

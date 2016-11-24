@@ -1,12 +1,25 @@
 <resources>
-    <string name="app_name">dEsCool</string>
+    <string name="app_name">inveNapp</string>
     <string name="main_no_items">No orders to display</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_register">Register</string>
     <string name="title_activity_add_device">AddDevice</string>
     <string name="deviceselect">Laptop</string>
+    <string name="userselect">Select</string>
     <string name="username_hint"><font size="14">Username</font></string>
     <string name="password_hint"><font size="14">Password</font></string>
+    <string name="forgotuseremail_hint"><font size="14">Enter Your Registered Email</font></string>
+    <string name="code_hint"><font size="14">Enter Code</font></string>
+
+    <string-array name="cluster_arrays">
+
+        <item>Common</item>
+        <item>Consumers</item>
+        <item>mCommerce</item>
+        <item>SDP</item>
+
+    </string-array>
+
     <string-array name="devicetype_arrays">
         <item>    </item>
         <item>Laptop</item>
@@ -72,6 +85,7 @@
     <string name="title_activity_view_my_devices">ViewMyDevices</string>
     <string name="title_activity_base">BaseActivity</string>
     <string name="title_activity_home">Home</string>
+    <string name="title_activity_password_change">PasswordChange</string>
 
 
 </resources>

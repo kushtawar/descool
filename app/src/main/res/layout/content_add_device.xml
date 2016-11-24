@@ -18,9 +18,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.cruxitech.android.descool.AddDevice"
+    tools:context="com.cruxitech.android.invenapp.AddDevice"
     tools:showIn="@layout/activity_add_device"
-
     android:background="@color/colorbackground"
     android:orientation="vertical">
 
@@ -47,18 +46,7 @@
         android:onClick="methodaddDevice"
         />
 
-    <!--<Button-->
-        <!--android:layout_marginTop="@dimen/activity_vertical_margin"-->
-        <!--android:layout_width="250dp"-->
-        <!--android:layout_gravity="center_horizontal"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:text="View All Devices"-->
-        <!--android:textColor="#FFFFFF"-->
-        <!--android:background="@drawable/mybutton"-->
-        <!--android:id="@+id/buttonViewDevices"-->
-        <!--android:onClick="methodViewAllDevices"-->
 
-        <!--/>-->
 
     <TextView
         android:layout_width="match_parent"

@@ -95,7 +95,69 @@
 
     <TableRow
         android:id="@+id/tr4"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_width = "match_parent"
+
+        android:layout_height = "wrap_content"
+        android:orientation = "horizontal">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimaryDark"
+        android:gravity="right"
+        android:paddingTop="20dp"
+        android:layout_weight="1"
+        android:text="Device Owner" />
+
+    <Spinner
+        android:id="@+id/spinnerTextOwner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="20dp"
+        android:layout_gravity="right"
+        android:layout_weight="2"
+
+        android:prompt="@string/userselect"
+        android:paddingLeft="@dimen/paddingleftforspinner"
+         />
+
+
+
+</TableRow>
+
+    <TableRow
+        android:id="@+id/tr5"
+        android:layout_marginTop="30dp"
+
+        android:layout_width = "match_parent"
+        android:layout_height = "wrap_content"
+        android:orientation = "horizontal"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimaryDark"
+            android:gravity="right"
+
+            android:layout_weight="1"
+            android:text="Cluster" />
+
+        <Spinner
+            android:id="@+id/spinnerDeviceCluster"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/cluster_arrays"
+
+            android:layout_gravity="right"
+            android:layout_weight="2"
+            android:paddingLeft="@dimen/paddingleftforspinner"
+            android:prompt="@string/deviceselect" />
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tr6"
+        android:layout_marginTop="20dp"
 android:gravity="bottom"
         android:layout_width = "match_parent"
         android:layout_height = "wrap_content"
@@ -108,7 +170,7 @@ android:gravity="bottom"
         android:gravity="right"
 
         android:layout_weight="1"
-        android:text="Device No" />
+        android:text="IMEI/Device No" />
 
     <EditText
         android:layout_width="match_parent"
@@ -130,40 +192,7 @@ android:minWidth="@dimen/min_textviewwidthintablerow"
     </TableRow>
 
     <TableRow
-        android:id="@+id/tr5"
-        android:layout_marginTop="20dp"
-        android:gravity="bottom"
-        android:layout_width = "match_parent"
-        android:layout_height = "wrap_content"
-        android:orientation = "horizontal">
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="@color/colorPrimaryDark"
-        android:gravity="right"
-        android:layout_weight="1"
-        android:text="Device Owner" />
-
-
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/editTextOwner"
-        android:imeOptions="actionNext"
-        android:minWidth="@dimen/min_textviewwidthintablerow"
-        android:singleLine="true"
-        android:layout_weight="2"
-        android:layout_gravity="right"
-
-
-        android:textColorHint="@color/colorHint"/>
-
-    </TableRow>
-
-    <TableRow
-        android:id="@+id/tr6"
+        android:id="@+id/tr7"
         android:layout_marginTop="20dp"
         android:gravity="bottom"
         android:layout_width = "match_parent"
@@ -194,6 +223,9 @@ android:minWidth="@dimen/min_textviewwidthintablerow"
         android:id="@+id/editTextDeviceModel"
 
         />
-
     </TableRow>
+
+
+
+
 </TableLayout>

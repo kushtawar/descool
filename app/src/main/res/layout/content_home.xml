@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/homebackground"
     android:orientation="vertical">
 
     <include layout="@layout/commontoolbar" />
@@ -18,24 +19,60 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:layout_behavior="@string/appbar_scrolling_view_behavior"
-            tools:context="com.cruxitech.android.descool.ViewAllDevices"
-            tools:showIn="@layout/activity_view_all_devices">
+            tools:context="com.cruxitech.android.invenapp.Home"
+            tools:showIn="@layout/activity_home">
 
 
+            <TextView
+                android:id="@+id/txtHeaderAccountActivate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
 
+                android:layout_centerHorizontal="true"
+                android:textColor="#010500"
+                android:text="Please click on the below link to activate your account. You will be asked to enter the 6 digit unique code sent on your registered email."
+                android:typeface="serif"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"
+                android:layout_centerInParent="true"
+
+                android:visibility="gone"
+
+                />
+
+            <TextView
+                android:id="@+id/txtviewAccountStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtHeaderAccountActivate"
+                android:layout_centerHorizontal="true"
+                android:textColor="#19540b"
+                android:text="Activate Account"
+                android:typeface="serif"
+                android:textAppearance="?android:textAppearanceLarge"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"
+                android:layout_centerInParent="true"
+                android:clickable="true"
+                android:visibility="gone"
+                android:onClick="accountactive"
+                />
 
             <ListView
                 android:id="@+id/listhomescreen"
-                android:padding="16dp"
+
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:divider="#757584"
+                android:divider="#cecee2"
                 android:entries="@array/devicetype_arrays"
-                android:dividerHeight="2dp"
+                android:layout_centerVertical="true"
+                android:dividerHeight="4dp"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:layout_margin="10dp"
-                android:background="#26edc6"
-                android:listSelector="@drawable/listselected"
+                android:background="@drawable/listviewcurve"
+
                 />
 
 
