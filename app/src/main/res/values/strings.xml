@@ -86,6 +86,7 @@
     <string name="title_activity_base">BaseActivity</string>
     <string name="title_activity_home">Home</string>
     <string name="title_activity_password_change">PasswordChange</string>
+    <string name="title_activity_main2">Main2Activity</string>
 
 
 </resources>
