@@ -1,4 +1,4 @@
-package com.cruxitech.android.invenapp;
+package com.cruxitech.android.descool;
 
 import android.content.Context;
 import android.util.Log;
@@ -56,7 +56,7 @@ public class DeviceOrderAdapter extends BaseAdapter implements Filterable {
         View v = convertView;
         if (convertView == null) {
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            convertView = inflater.inflate(com.cruxitech.android.invenapp.R.layout.list_alldevices, null);
+            convertView = inflater.inflate(com.cruxitech.android.descool.R.layout.list_alldevices, null);
         }
 
 
@@ -71,9 +71,9 @@ public class DeviceOrderAdapter extends BaseAdapter implements Filterable {
        //     TextView nodatadisplaytextview = (TextView) v.findViewById(R.id.txtviewEmpty);
      //       lv.setEmptyView(nodatadisplaytextview);
 
-            TextView devtypeview = (TextView) convertView.findViewById(com.cruxitech.android.invenapp.R.id.devtype);
-            TextView devnoview = (TextView) convertView.findViewById(com.cruxitech.android.invenapp.R.id.devno);
-            TextView devownerview = (TextView) convertView.findViewById(com.cruxitech.android.invenapp.R.id.devowner);
+            TextView devtypeview = (TextView) convertView.findViewById(com.cruxitech.android.descool.R.id.devtype);
+            TextView devnoview = (TextView) convertView.findViewById(com.cruxitech.android.descool.R.id.devno);
+            TextView devownerview = (TextView) convertView.findViewById(com.cruxitech.android.descool.R.id.devowner);
             TextView devlocation = (TextView) convertView.findViewById(R.id.devlocation);
             TextView devmanufacturer = (TextView) convertView.findViewById(R.id.devmanufacturer);
             TextView devlastupdatedby = (TextView) convertView.findViewById(R.id.lastupdatedby);

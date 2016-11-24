@@ -1,4 +1,4 @@
-package com.cruxitech.android.invenapp;
+package com.cruxitech.android.descool;
 
 /**
  * Created by kushtawar on 30/07/16.

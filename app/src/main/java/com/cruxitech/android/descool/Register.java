@@ -1,4 +1,4 @@
-package com.cruxitech.android.invenapp;
+package com.cruxitech.android.descool;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -22,10 +22,10 @@ public class Register extends AppCompatActivity implements AsyncResponse{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(com.cruxitech.android.invenapp.R.layout.activity_register);
-        ET_NAME = (EditText)findViewById(com.cruxitech.android.invenapp.R.id.name);
-        ET_USER_NAME= (EditText)findViewById(com.cruxitech.android.invenapp.R.id.new_user_name);
-        ET_USER_PASS = (EditText)findViewById(com.cruxitech.android.invenapp.R.id.new_user_pass);
+        setContentView(com.cruxitech.android.descool.R.layout.activity_register);
+        ET_NAME = (EditText)findViewById(com.cruxitech.android.descool.R.id.name);
+        ET_USER_NAME= (EditText)findViewById(com.cruxitech.android.descool.R.id.new_user_name);
+        ET_USER_PASS = (EditText)findViewById(com.cruxitech.android.descool.R.id.new_user_pass);
         ET_USER_CONFIRM_PASS = (EditText)findViewById(R.id.new_user_confirmpass);
         ET_USER_CONFIRM_PASS = (EditText)findViewById(R.id.new_user_confirmpass);
         ET_USER_EMAIL = (EditText)findViewById(R.id.new_user_email);

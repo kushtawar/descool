@@ -1,40 +1,40 @@
-package com.cruxitech.android.invenapp;
+package com.cruxitech.android.descool;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.SearchView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class ViewAllDevices extends BaseActivity implements AsyncResponse {
+
+
+public class ViewMyDevices extends BaseActivity implements AsyncResponse {
 
     public static ProgressDialog m_ProgressDialog = null;
     private ArrayList<DeviceOrder> m_orders = null;
     private static DeviceOrderAdapter m_adapter;
-    TextView txtviewEmptymydevices=null;
-    public static String jsonstringval=null;
-    Toolbar mToolbar;
-    ListView lv=null;
-    EditText inputSearch;
-    SearchView search=null;
+SearchView search=null;
 
+    public static String jsonstringval=null;
+
+    ListView lv=null;
+
+    TextView txtviewEmptymydevices=null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_view_all_devices);
-
         jsonstringval=null;
-         lv = (ListView)findViewById(com.cruxitech.android.invenapp.R.id.list1);
-        txtviewEmptymydevices=(TextView)findViewById(R.id.txtviewEmpty);
+        setContentView(R.layout.activity_view_my_devices);
+        txtviewEmptymydevices=(TextView)findViewById(R.id.txtviewEmptymydevices);
+        lv = (ListView)findViewById(R.id.listmydevices);
+
 
         this.getdatafromdatabase();
 
@@ -43,13 +43,11 @@ public class ViewAllDevices extends BaseActivity implements AsyncResponse {
 
                                       @Override
                                       public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-
-                                          Intent newActivity = new Intent(ViewAllDevices.this, ViewDevice.class);
-
+                                          //Toast.makeText(getApplicationContext(), "You Clicked " + m_adapter.getItem(i).getDevuniqueid(), Toast.LENGTH_SHORT).show();
+                                          Intent newActivity = new Intent(ViewMyDevices.this, ViewDevice.class);
                                           Bundle b = new CommonProcs().onClickViewDeviceList(getApplicationContext(), m_adapter, i, newActivity);
-                                          b.putString("callingclass", "ViewAllDevices");
+                                          b.putString("callingclass", "ViewMyDevices");
                                           newActivity.putExtras(b); //Put your id to your next Intent
-
                                           startActivity(newActivity);
                                           finish();
 
@@ -59,17 +57,11 @@ public class ViewAllDevices extends BaseActivity implements AsyncResponse {
 
                                   }
 
-
         );
-
         search=(SearchView) findViewById(R.id.searchfield);
         search.setVisibility(View.VISIBLE);
         search.setQueryHint("Search");
         //*** setOnQueryTextFocusChangeListener ***
-
-
-
-
         search.setOnQueryTextFocusChangeListener(new View.OnFocusChangeListener() {
 
             @Override
@@ -86,7 +78,7 @@ public class ViewAllDevices extends BaseActivity implements AsyncResponse {
             @Override
             public boolean onQueryTextSubmit(String query) {
 
-                ViewAllDevices.this.m_adapter.getFilter().filter(query);
+                ViewMyDevices.this.m_adapter.getFilter().filter(query);
                 return false;
             }
 
@@ -99,18 +91,18 @@ public class ViewAllDevices extends BaseActivity implements AsyncResponse {
             }
         });
 
+
+
     }
 
-    @Override
-    protected void onPostCreate(Bundle savedInstanceState) {
-        super.onPostCreate(savedInstanceState);
-    }
+
 
     @Override
-    public void onBackPressed() {
+    public void onBackPressed()
+    {
         super.onBackPressed();
         finish();
-        startActivity(new Intent(ViewAllDevices.this, Landingpage.class));
+        startActivity(new Intent(ViewMyDevices.this, Landingpage.class));
 
 
     }
@@ -119,28 +111,28 @@ public class ViewAllDevices extends BaseActivity implements AsyncResponse {
 
     private void getdatafromdatabase()
     {
-        String method = "viewalldevices";
-        BackgroundTask.jsonstring=null;
-        BackgroundTask backgroundTask = new BackgroundTask(this, new AsyncResponse() {
+        String method = "viewmydevices";
+        BackgroundTask backgroundTask = new BackgroundTask(ViewMyDevices.this, new AsyncResponse() {
 
             @Override
             public void processFinish(String output) {
-                if (output.equals(StatusConstants.statusViewAllDevicesSuccessful)) {
+                Log.e("invenapp:method:", new CommonProcs().getMethodname() + ":output:" + output);
+                if (output.equals(StatusConstants.statusViewMyDeviceSuccessful)) {
 
-                m_orders = BackgroundTask.m_orders;
-                m_adapter = new DeviceOrderAdapter(ViewAllDevices.this, com.cruxitech.android.invenapp.R.layout.list_alldevices, m_orders);
-                lv.setAdapter(m_adapter);
-                    lv.setTextFilterEnabled(true);
-//m_orders=BackgroundTask.m_orders;
-                Log.e("viewalldeviceslog",output);
-                }else
+                    m_orders = BackgroundTask.m_orders;
+                    m_adapter = new DeviceOrderAdapter(ViewMyDevices.this, R.layout.list_mydevice, m_orders);
+                    lv.setAdapter(m_adapter);
+
+                    Log.e("invenapp:viewmydevices", output);
+            }else
                 {
-                    txtviewEmptymydevices.setText("No devices found ");
+                    txtviewEmptymydevices.setText("No devices found that are tagged on your name.");
                 }
-            }
+
+
+     }
         });
         backgroundTask.execute(method);
-
 
     }
 
@@ -148,19 +140,14 @@ public class ViewAllDevices extends BaseActivity implements AsyncResponse {
     public void onContentChanged() {
         super.onContentChanged();
 
-        View empty = findViewById(com.cruxitech.android.invenapp.R.id.txtviewEmpty);
-        ListView list = (ListView) findViewById(com.cruxitech.android.invenapp.R.id.list1);
+        View empty = findViewById(R.id.txtviewEmptymydevices);
+        ListView list = (ListView) findViewById(R.id.listmydevices);
         list.setEmptyView(empty);
     }
 
     public void processFinish(String output){
-        Log.e("viewalldeviceslog2", output);
+        Log.e("viewmydeviceslog2", output);
     }
-
-
-
-
-
 
 
 }

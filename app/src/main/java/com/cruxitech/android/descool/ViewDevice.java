@@ -1,4 +1,4 @@
-package com.cruxitech.android.invenapp;
+package com.cruxitech.android.descool;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -35,16 +35,16 @@ private  String devuniqueid,devicetype,devicelocation,devicemanufacturer,devicen
         session = new SessionManager(getApplicationContext());
 
 
-        setContentView(com.cruxitech.android.invenapp.R.layout.activity_view_device);
+        setContentView(com.cruxitech.android.descool.R.layout.activity_view_device);
 
         if (session.isUserLoggedIn()) {
 
-            DeviceType = (Spinner) findViewById(com.cruxitech.android.invenapp.R.id.spinnerDeviceType);
-            DeviceLocation = (Spinner) findViewById(com.cruxitech.android.invenapp.R.id.spinnerDeviceLocation);
-            DeviceManufacturer = (Spinner) findViewById(com.cruxitech.android.invenapp.R.id.spinnerDeviceManufacturer);
-            DeviceNo = (EditText) findViewById(com.cruxitech.android.invenapp.R.id.editTextDeviceNo);
-            DeviceOwner = (EditText) findViewById(com.cruxitech.android.invenapp.R.id.editTextOwner);
-            DeviceModel = (EditText) findViewById(com.cruxitech.android.invenapp.R.id.editTextDeviceModel);
+            DeviceType = (Spinner) findViewById(com.cruxitech.android.descool.R.id.spinnerDeviceType);
+            DeviceLocation = (Spinner) findViewById(com.cruxitech.android.descool.R.id.spinnerDeviceLocation);
+            DeviceManufacturer = (Spinner) findViewById(com.cruxitech.android.descool.R.id.spinnerDeviceManufacturer);
+            DeviceNo = (EditText) findViewById(com.cruxitech.android.descool.R.id.editTextDeviceNo);
+            DeviceOwner = (EditText) findViewById(com.cruxitech.android.descool.R.id.editTextOwner);
+            DeviceModel = (EditText) findViewById(com.cruxitech.android.descool.R.id.editTextDeviceModel);
             Devlastupdatedbyandon = (TextView) findViewById(R.id.lastupdatedbyandon);
             imgdevtype=(ImageView)findViewById(R.id.icondevtype);
 

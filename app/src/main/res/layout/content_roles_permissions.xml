@@ -19,7 +19,7 @@
     android:layout_height="match_parent"
     android:background="@color/colorbackground"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.cruxitech.android.invenapp.RolesPermissions"
+    tools:context="com.cruxitech.android.descool.RolesPermissions"
     tools:showIn="@layout/activity_roles_permissions">
 
     <TextView

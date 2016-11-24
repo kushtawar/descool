@@ -1,4 +1,4 @@
-package com.cruxitech.android.invenapp;
+package com.cruxitech.android.descool;
 
 import android.app.Activity;
 import android.app.AlertDialog;

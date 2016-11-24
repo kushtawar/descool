@@ -1,40 +1,40 @@
-package com.cruxitech.android.invenapp;
+package com.cruxitech.android.descool;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.SearchView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
 
-
-
-public class ViewMyDevices extends BaseActivity implements AsyncResponse {
+public class ViewAllDevices extends BaseActivity implements AsyncResponse {
 
     public static ProgressDialog m_ProgressDialog = null;
     private ArrayList<DeviceOrder> m_orders = null;
     private static DeviceOrderAdapter m_adapter;
-SearchView search=null;
-
-    public static String jsonstringval=null;
-
-    ListView lv=null;
-
     TextView txtviewEmptymydevices=null;
+    public static String jsonstringval=null;
+    Toolbar mToolbar;
+    ListView lv=null;
+    EditText inputSearch;
+    SearchView search=null;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        jsonstringval=null;
-        setContentView(R.layout.activity_view_my_devices);
-        txtviewEmptymydevices=(TextView)findViewById(R.id.txtviewEmptymydevices);
-        lv = (ListView)findViewById(R.id.listmydevices);
+        setContentView(R.layout.activity_view_all_devices);
 
+        jsonstringval=null;
+         lv = (ListView)findViewById(com.cruxitech.android.descool.R.id.list1);
+        txtviewEmptymydevices=(TextView)findViewById(R.id.txtviewEmpty);
 
         this.getdatafromdatabase();
 
@@ -43,11 +43,13 @@ SearchView search=null;
 
                                       @Override
                                       public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                                          //Toast.makeText(getApplicationContext(), "You Clicked " + m_adapter.getItem(i).getDevuniqueid(), Toast.LENGTH_SHORT).show();
-                                          Intent newActivity = new Intent(ViewMyDevices.this, ViewDevice.class);
+
+                                          Intent newActivity = new Intent(ViewAllDevices.this, ViewDevice.class);
+
                                           Bundle b = new CommonProcs().onClickViewDeviceList(getApplicationContext(), m_adapter, i, newActivity);
-                                          b.putString("callingclass", "ViewMyDevices");
+                                          b.putString("callingclass", "ViewAllDevices");
                                           newActivity.putExtras(b); //Put your id to your next Intent
+
                                           startActivity(newActivity);
                                           finish();
 
@@ -57,11 +59,17 @@ SearchView search=null;
 
                                   }
 
+
         );
+
         search=(SearchView) findViewById(R.id.searchfield);
         search.setVisibility(View.VISIBLE);
         search.setQueryHint("Search");
         //*** setOnQueryTextFocusChangeListener ***
+
+
+
+
         search.setOnQueryTextFocusChangeListener(new View.OnFocusChangeListener() {
 
             @Override
@@ -78,7 +86,7 @@ SearchView search=null;
             @Override
             public boolean onQueryTextSubmit(String query) {
 
-                ViewMyDevices.this.m_adapter.getFilter().filter(query);
+                ViewAllDevices.this.m_adapter.getFilter().filter(query);
                 return false;
             }
 
@@ -91,18 +99,18 @@ SearchView search=null;
             }
         });
 
-
-
     }
 
-
+    @Override
+    protected void onPostCreate(Bundle savedInstanceState) {
+        super.onPostCreate(savedInstanceState);
+    }
 
     @Override
-    public void onBackPressed()
-    {
+    public void onBackPressed() {
         super.onBackPressed();
         finish();
-        startActivity(new Intent(ViewMyDevices.this, Landingpage.class));
+        startActivity(new Intent(ViewAllDevices.this, Landingpage.class));
 
 
     }
@@ -111,28 +119,28 @@ SearchView search=null;
 
     private void getdatafromdatabase()
     {
-        String method = "viewmydevices";
-        BackgroundTask backgroundTask = new BackgroundTask(ViewMyDevices.this, new AsyncResponse() {
+        String method = "viewalldevices";
+        BackgroundTask.jsonstring=null;
+        BackgroundTask backgroundTask = new BackgroundTask(this, new AsyncResponse() {
 
             @Override
             public void processFinish(String output) {
-                Log.e("invenapp:method:", new CommonProcs().getMethodname() + ":output:" + output);
-                if (output.equals(StatusConstants.statusViewMyDeviceSuccessful)) {
+                if (output.equals(StatusConstants.statusViewAllDevicesSuccessful)) {
 
-                    m_orders = BackgroundTask.m_orders;
-                    m_adapter = new DeviceOrderAdapter(ViewMyDevices.this, R.layout.list_mydevice, m_orders);
-                    lv.setAdapter(m_adapter);
-
-                    Log.e("invenapp:viewmydevices", output);
-            }else
+                m_orders = BackgroundTask.m_orders;
+                m_adapter = new DeviceOrderAdapter(ViewAllDevices.this, com.cruxitech.android.descool.R.layout.list_alldevices, m_orders);
+                lv.setAdapter(m_adapter);
+                    lv.setTextFilterEnabled(true);
+//m_orders=BackgroundTask.m_orders;
+                Log.e("viewalldeviceslog",output);
+                }else
                 {
-                    txtviewEmptymydevices.setText("No devices found that are tagged on your name.");
+                    txtviewEmptymydevices.setText("No devices found ");
                 }
-
-
-     }
+            }
         });
         backgroundTask.execute(method);
+
 
     }
 
@@ -140,14 +148,19 @@ SearchView search=null;
     public void onContentChanged() {
         super.onContentChanged();
 
-        View empty = findViewById(R.id.txtviewEmptymydevices);
-        ListView list = (ListView) findViewById(R.id.listmydevices);
+        View empty = findViewById(com.cruxitech.android.descool.R.id.txtviewEmpty);
+        ListView list = (ListView) findViewById(com.cruxitech.android.descool.R.id.list1);
         list.setEmptyView(empty);
     }
 
     public void processFinish(String output){
-        Log.e("viewmydeviceslog2", output);
+        Log.e("viewalldeviceslog2", output);
     }
+
+
+
+
+
 
 
 }

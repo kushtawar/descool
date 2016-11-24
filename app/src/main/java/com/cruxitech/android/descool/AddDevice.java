@@ -1,4 +1,4 @@
-package com.cruxitech.android.invenapp;
+package com.cruxitech.android.descool;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -23,15 +23,15 @@ private static boolean failflag=false;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Log.e("failflag", String.valueOf(failflag));
-        setContentView(com.cruxitech.android.invenapp.R.layout.activity_add_device);
-        DeviceType = (Spinner)findViewById(com.cruxitech.android.invenapp.R.id.spinnerDeviceType);
-        DeviceNo = (EditText)findViewById(com.cruxitech.android.invenapp.R.id.editTextDeviceNo);
-        DeviceOwner = (EditText)findViewById(com.cruxitech.android.invenapp.R.id.editTextOwner);
-        DeviceLocation = (Spinner)findViewById(com.cruxitech.android.invenapp.R.id.spinnerDeviceLocation);
-        DeviceManufacturer = (Spinner)findViewById(com.cruxitech.android.invenapp.R.id.spinnerDeviceManufacturer);
-        DeviceModel = (EditText)findViewById(com.cruxitech.android.invenapp.R.id.editTextDeviceModel);
+        setContentView(com.cruxitech.android.descool.R.layout.activity_add_device);
+        DeviceType = (Spinner)findViewById(com.cruxitech.android.descool.R.id.spinnerDeviceType);
+        DeviceNo = (EditText)findViewById(com.cruxitech.android.descool.R.id.editTextDeviceNo);
+        DeviceOwner = (EditText)findViewById(com.cruxitech.android.descool.R.id.editTextOwner);
+        DeviceLocation = (Spinner)findViewById(com.cruxitech.android.descool.R.id.spinnerDeviceLocation);
+        DeviceManufacturer = (Spinner)findViewById(com.cruxitech.android.descool.R.id.spinnerDeviceManufacturer);
+        DeviceModel = (EditText)findViewById(com.cruxitech.android.descool.R.id.editTextDeviceModel);
 
-        btnAddDevice = (Button)findViewById(com.cruxitech.android.invenapp.R.id.buttonAdd);
+        btnAddDevice = (Button)findViewById(com.cruxitech.android.descool.R.id.buttonAdd);
 
 
 

@@ -21,7 +21,7 @@
     android:layout_height="match_parent"
 
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.cruxitech.android.invenapp.ViewAllDevices"
+    tools:context="com.cruxitech.android.descool.ViewAllDevices"
     tools:showIn="@layout/activity_view_all_devices">
 
 

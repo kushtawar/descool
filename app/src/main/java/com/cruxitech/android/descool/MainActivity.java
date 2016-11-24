@@ -1,4 +1,4 @@
-package com.cruxitech.android.invenapp;
+package com.cruxitech.android.descool;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -42,7 +42,7 @@ public static String methodmain=null;
         super.onCreate(savedInstanceState);
         getWindow().setBackgroundDrawableResource(R.color.colorbackground);
         session = new SessionManager(getApplicationContext());
-        setContentView(com.cruxitech.android.invenapp.R.layout.activity_main);
+        setContentView(com.cruxitech.android.descool.R.layout.activity_main);
 
 
 
@@ -50,14 +50,14 @@ public static String methodmain=null;
 
 
 
-            ET_NAME = (EditText) findViewById(com.cruxitech.android.invenapp.R.id.user_name);
+            ET_NAME = (EditText) findViewById(com.cruxitech.android.descool.R.id.user_name);
             //    ET_NAME.getBackground().mutate().setColorFilter(Color.GREEN, PorterDuff.Mode.SRC_ATOP);
             Typeface type = Typeface.createFromAsset(getAssets(), "fonts/font_algerian.ttf");
             txtLoginHeader = (TextView) findViewById(R.id.LoginHeader);
 
             txtLoginHeader.setTypeface(type);
-            ET_NAME = (EditText) findViewById(com.cruxitech.android.invenapp.R.id.user_name);
-            ET_PASS = (EditText) findViewById(com.cruxitech.android.invenapp.R.id.user_pass);
+            ET_NAME = (EditText) findViewById(com.cruxitech.android.descool.R.id.user_name);
+            ET_PASS = (EditText) findViewById(com.cruxitech.android.descool.R.id.user_pass);
             btnLogin = (Button) findViewById(R.id.btnLogin);
             Drawable drawable_username = ET_NAME.getBackground(); // get current EditText drawable
             drawable_username.setColorFilter(Color.WHITE, PorterDuff.Mode.SRC_ATOP); // change the drawable color

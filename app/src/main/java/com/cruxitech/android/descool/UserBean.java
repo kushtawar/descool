@@ -1,16 +1,14 @@
-package com.cruxitech.android.invenapp;
+package com.cruxitech.android.descool;
 
 /**
  * Created by kushtawar on 30/07/16.
  */
-public class LoginBean {
+public class UserBean {
 
     private String name;
     private String username;
     private String uniqueuserid;
     private String email;
-    private String activestatus;
-    private String hashkey;
 
 
     public String getName() {
@@ -40,20 +38,6 @@ public class LoginBean {
     }
     public void setEmail(String email) {
         this.email = email;
-    }
-
-    public String getActivestatus() {
-        return activestatus;
-    }
-    public void setActivestatus(String activestatus) {
-        this.activestatus = activestatus;
-    }
-
-    public String getHashkey() {
-        return hashkey;
-    }
-    public void setHashkey(String hashkey) {
-        this.hashkey = hashkey;
     }
 
 
