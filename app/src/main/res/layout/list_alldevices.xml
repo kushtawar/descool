@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:stretchColumns="4">
+
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp"
+        android:layout_weight="1">
+
+    <ImageView
+        android:id="@+id/icondevtype"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+
+        android:layout_weight="1"
+        android:src="@drawable/mobile" />
+
+    <TextView
+        android:id="@+id/devowner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/devno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:text="New Text"
+        android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/lastupdatedby"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10dp"
+            android:textColor="#f11d05"
+            android:layout_gravity="right"
+            android:layout_weight="1"
+            android:text="lastupdated by \n \n:"
+            android:backgroundTint="#a90f5c"
+            />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/devtype"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+android:layout_marginLeft="5dp"
+            android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/devlocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#0a0fa7"
+        android:layout_weight="1"
+        android:text="Germany"
+        android:layout_gravity="center"
+
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/devmanufacturer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#053d19"
+        android:layout_weight="1"
+        android:text="Samsung"
+        android:layout_gravity="right"
+        android:textStyle="bold"/>
+
+
+
+    <TextView
+        android:id="@+id/lastupdatedon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#f11d05"
+        android:layout_gravity="right"
+        android:layout_weight="1"
+        android:text="21-Oct-16"
+        android:textSize="10dp"
+        android:shadowColor="#ac1c46"
+        />
+    </TableRow>
+
+</TableLayout>

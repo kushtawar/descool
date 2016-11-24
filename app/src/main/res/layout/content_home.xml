@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/commontoolbar" />
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fadingEdge="none"
+        android:fillViewport="true">
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            tools:context="com.cruxitech.android.invenapp.ViewAllDevices"
+            tools:showIn="@layout/activity_view_all_devices">
+
+
+
+
+            <ListView
+                android:id="@+id/listhomescreen"
+                android:padding="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="#757584"
+                android:entries="@array/devicetype_arrays"
+                android:dividerHeight="2dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_margin="10dp"
+                android:background="#26edc6"
+                android:listSelector="@drawable/listselected"
+                />
+
+
+
+
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,78 @@
+<resources>
+    <string name="app_name">inveNapp</string>
+    <string name="main_no_items">No orders to display</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_register">Register</string>
+    <string name="title_activity_add_device">AddDevice</string>
+    <string name="deviceselect">Laptop</string>
+    <string name="username_hint"><font size="14">Username</font></string>
+    <string name="password_hint"><font size="14">Password</font></string>
+    <string-array name="devicetype_arrays">
+        <item>    </item>
+        <item>Laptop</item>
+        <item>Mobile</item>
+        <item>Tablet</item>
+        <item>Server</item>
+        <item>Others</item>
+    </string-array>
+
+    <string-array name="available_roles">
+
+        <item>View Own</item>
+        <item>View All</item>
+        <item>Add Device</item>
+        <item>Device Admin</item>
+        <item>Super User</item>
+
+    </string-array>
+
+    <string-array name="available_permissions">
+
+        <!--String[] availableperms = {"View_Own_Device", "Edit_Own_Device", "Delete_Own_Device", "View_All_Devices", "Edit_All_Devices", "Delete_All_Devices","Add_Device"};-->
+        <item>View_Own_Device</item>
+        <item>Edit_Own_Device</item>
+        <item>Delete_Own_Device</item>
+        <item>Site Admin</item>
+
+    </string-array>
+
+
+    <string name="devicelocationdefault">India</string>
+    <string-array name="devicelocation_arrays">
+        <item>    </item>
+        <item>India</item>
+        <item>Germany</item>
+        <item>Others</item>
+    </string-array>
+
+    <string name="devicemanufacturerdefault">Select</string>
+    <string-array name="devicemanufacturer_arrays">
+        <item>    </item>
+        <item>Samsung</item>
+        <item>LG</item>
+        <item>Apple</item>
+        <item>HTC</item>
+        <item>Sony</item>
+        <item>Vodafone</item>
+        <item>HP</item>
+        <item>Toshiba</item>
+        <item>Lenovo</item>
+        <item>IBM</item>
+        <item>Nokia</item>
+        <item>Lenovo</item>
+        <item>Dell</item>
+        <item>Others</item>
+
+    </string-array>
+    <string name="title_activity_view_devices">ViewDevices</string>
+    <string name="title_activity_view_all_devices">ViewAllDevices</string>
+    <string name="title_activity_landingpage">Landingpage</string>
+    <string name="title_activity_user_management_home">UserManagementHome</string>
+    <string name="title_activity_roles_permissions">RolesPermissions</string>
+    <string name="title_activity_view_my_devices">ViewMyDevices</string>
+    <string name="title_activity_base">BaseActivity</string>
+    <string name="title_activity_home">Home</string>
+
+
+</resources>
+

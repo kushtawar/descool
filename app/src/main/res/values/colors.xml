@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorbackground">#c9c9c5</color>
+    <color name="colorPrimary">#0b89ed</color>
+    <color name="colorPrimaryDark">#0e2ece</color>
+    <color name="colorAccent">#d90e07</color>
+    <color name="colorHint">#202128</color>
+    <color name="colorToolbar">#7d82ab</color>
+    <color name="colorLoginToolbar">#675fd2</color>
+    <color name="colorPopup">#6cbab0</color>
+
+</resources>

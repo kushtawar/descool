@@ -1,0 +1,28 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.cruxitech.android.invenapp.Landingpage">
+
+
+
+
+
+    <item android:id="@+id/refresh"
+        android:title="Refresh"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/usersettings"
+
+        android:title="Settings"
+        app:showAsAction="never"/>
+    <item android:id="@+id/logout"
+
+        android:title="Logout"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/about"
+        android:orderInCategory="100"
+        android:title="About"
+        app:showAsAction="never"/>
+
+</menu>

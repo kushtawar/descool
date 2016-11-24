@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/commontoolbar" />
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fadingEdge="none"
+        android:fillViewport="true">
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorbackground"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.cruxitech.android.invenapp.RolesPermissions"
+    tools:showIn="@layout/activity_roles_permissions">
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimaryDark"
+        android:id="@+id/textRolesPermissions"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:text="Select User and then assign roles" />
+
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimaryDark"
+        android:id="@+id/hiddenuserid"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:visibility="gone"
+        android:text="" />
+
+
+    <Spinner
+        android:id="@+id/spinnerUsers"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+
+        android:paddingLeft="@dimen/paddingleftforspinner"
+        android:layout_below="@+id/textRolesPermissions"
+        />
+        <!--android:entries="@array/available_roles"-->
+
+
+
+    <ListView
+        android:layout_marginTop="40dp"
+        android:paddingLeft="@dimen/paddingleftforspinner"
+        android:paddingRight="@dimen/paddingleftforspinner"
+        android:id="@+id/listviewroles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+
+        android:layout_below="@+id/spinnerUsers"
+        android:visibility="gone">
+    </ListView>
+
+
+
+    <Button
+        android:id="@+id/buttoninlistviewpermissions"
+        android:background="@drawable/rightbottombutton"
+        android:textColor="#FFFFFF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/listviewroles"
+android:onClick="setuserpermissions"
+
+        android:text="Submit" />
+</RelativeLayout>
+    </ScrollView>
+    </LinearLayout>

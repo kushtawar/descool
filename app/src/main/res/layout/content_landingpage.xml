@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+
+    <include layout="@layout/commontoolbar" />
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fadingEdge="none"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:fillViewport="true">
+
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:background="@color/colorbackground"
+    tools:context="com.cruxitech.android.invenapp.Landingpage"
+
+    tools:showIn="@layout/activity_landingpage">
+
+
+
+    <TextView
+        android:id="@+id/txtviewAccountStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+android:layout_centerHorizontal="true"
+        android:textColor="#19540b"
+        android:text="Activate Account"
+        android:typeface="serif"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:layout_centerInParent="true"
+        android:clickable="true"
+        android:visibility="gone"
+        android:onClick="accountactive"
+        />
+
+
+
+
+    <Button
+
+        android:layout_width="190dp"
+        android:layout_height="110dp"
+        android:src="@drawable/user_management_1"
+        android:background="@drawable/lefttopbutton"
+        android:layout_centerInParent="true"
+        android:text="Admin"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="30dp"
+        android:textStyle="bold"
+        android:id="@+id/btnAdminView"
+        android:clickable="true"
+        android:onClick="UserManagementView"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+         />
+
+    <Button
+        android:layout_marginTop="15dp"
+        android:layout_width="190dp"
+        android:layout_height="110dp"
+        android:textColor="#FFFFFF"
+        android:text="View\nMy Devices"
+        android:layout_below="@id/btnAdminView"
+        android:background="@drawable/lefttopbutton"
+        android:shadowColor="#34c722"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+
+        android:id="@+id/btnViewmydevices"
+        android:onClick="ViewMyDevices"
+        />
+
+    <Button
+        android:layout_marginTop="15dp"
+        android:layout_width="190dp"
+        android:layout_height="110dp"
+        android:textColor="#FFFFFF"
+        android:text="Add New\nDevice"
+        android:layout_below="@id/btnViewmydevices"
+        android:background="@drawable/lefttopbutton"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/btnAddNewDevice"
+        android:onClick="AddNewDevice"
+        />
+
+    <Button
+        android:layout_marginTop="15dp"
+        android:layout_width="190dp"
+        android:layout_height="110dp"
+        android:textColor="#FFFFFF"
+        android:text="View\nAll Devices"
+        android:layout_below="@id/btnAddNewDevice"
+        android:background="@drawable/lefttopbutton"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/btnViewAllDevices"
+        android:onClick="ViewAllDevices"
+        />
+
+
+
+
+</RelativeLayout>
+
+</ScrollView>
+    </LinearLayout>

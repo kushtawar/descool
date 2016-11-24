@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fadingEdge="none"
+        android:fillViewport="true">
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main"
+    android:background="#78aee4"
+    android:orientation="vertical"
+    >
+    <TextView
+        android:id="@+id/LoginHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:textSize="50dp"
+        android:textColor="#19540b"
+        android:background="@mipmap/invenapp_blue"
+        android:typeface="serif"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        />
+    <TextView
+        android:id="@+id/tataimage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:textSize="50dp"
+        android:textColor="#19540b"
+        android:background="@mipmap/tata_logo1"
+        android:typeface="serif"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        />
+    <EditText
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/username_hint"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:textColorHint="#CCC"
+        android:imeOptions="actionNext"
+        android:singleLine="true"
+        android:textCursorDrawable="@drawable/mycursor"
+        android:textColor="#000"
+        android:id="@+id/user_name"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        />
+    <EditText
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/password_hint"
+        android:textColorHint="#CCC"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:textCursorDrawable="@drawable/mycursor"
+        android:textColor="#000"
+        android:imeOptions="actionDone"
+        android:singleLine="true"
+        android:textStyle="bold"
+        android:id="@+id/user_pass"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:inputType="textPassword"
+        />
+    <Button
+        android:layout_marginTop="20dp"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:text="Login"
+        android:background="@drawable/mybutton"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/btnLogin"
+        android:onClick="userLogin"
+        />
+
+    <!--<TextView
+        android:id="@+id/forgotPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Forgot Password?"
+
+        android:typeface="serif"
+        android:textAppearance="?android:textAppearanceSmall"
+        android:textStyle="bold"
+        android:textColor="#f1d12c19"
+        android:onClick="userReg"
+        android:clickable="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        />-->
+
+
+    <TextView
+        android:id="@+id/userReg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No account yet?? Create one"
+
+        android:typeface="serif"
+        android:textAppearance="?android:textAppearanceSmall"
+        android:textStyle="bold"
+        android:textColor="#f1d12c19"
+        android:onClick="userReg"
+        android:clickable="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        />
+
+   <!-- <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register Now"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:onClick="userReg"
+        />-->
+</LinearLayout>
+</ScrollView>
+    </LinearLayout>
