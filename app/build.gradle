@@ -5,11 +5,11 @@ android {
     buildToolsVersion "23.0.2"
 
     defaultConfig {
-        applicationId "com.cruxitech.android.invenapp"
+        applicationId "com.cruxitech.android.descool"
         minSdkVersion 15
         targetSdkVersion 23
-        versionCode 14
-        versionName "1.0"
+        versionCode 1000
+        versionName "100"
     }
     buildTypes {
         release {
@@ -17,7 +17,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             applicationVariants.all { variant ->
                 variant.outputs.each { output ->
-                    project.ext { appName = 'invenapp' }
+                    project.ext { appName = 'descool' }
                     def newName = output.outputFile.name
                     newName = newName.replace("app-", "$project.ext.appName-")
                     newName = newName.replace("debug", defaultConfig.versionName)
